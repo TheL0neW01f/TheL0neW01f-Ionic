@@ -1,0 +1,7 @@
+{
+  "name": "x-Budget",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
