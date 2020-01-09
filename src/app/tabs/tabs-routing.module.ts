@@ -1,3 +1,4 @@
+import { SettingsPageModule } from './../settings/settings.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
@@ -33,13 +34,22 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+            import('../budget/budget.module').then(m => m.BudgetPageModule)
+          }
+        ]
+      },
+      {
+        path: 'tab4',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../settings/settings.module').then( m => m.SettingsPageModule)
           }
         ]
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/settings',
         pathMatch: 'full'
       }
     ]
@@ -48,7 +58,22 @@ const routes: Routes = [
     path: '',
     redirectTo: '/tabs/tab1',
     pathMatch: 'full'
-  }
+  },
+  {
+    path: '',
+    redirectTo: '/tabs/tab2',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
+    redirectTo: '/tabs/tab3',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
+    redirectTo: '/settings',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({

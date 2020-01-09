@@ -1,9 +1,45 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
+     <!-- <ion-button slot="end" (click)="openSettings()" color="dark">Settings</ion-button>-->
+
+      <ion-avatar (click)="openSettings()" margin slot="end" style="width: 50px; height: 50px;">
+        <ion-img src="../../assets/icon/favicon.png"></ion-img>
+      </ion-avatar>
     <ion-title>
-      Tab Two
+      Expenses
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3"> 
+        <ion-card>
+          <ion-card-content>
+            <ion-item>
+              <ion-label position="floating">Expense Description</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating">Expense Amount</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+          </ion-card-content>
+
+          <div margin-vertical text-center>
+            <ion-button color="danger">
+              <ion-icon slot="start" name="close"></ion-icon>Clear</ion-button
+            >
+            <ion-button color="dark">
+              <ion-icon slot="start" name="add"></ion-icon>Add
+              Expense</ion-button
+            >
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

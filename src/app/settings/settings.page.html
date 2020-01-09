@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-avatar (click)="openSettings()" margin slot="end" style="width: 50px; height: 50px;">
+      <ion-img src="../../assets/icon/favicon.png"></ion-img>
+    </ion-avatar>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item (click)="openGeneral()">
+      <ion-icon name="walk" slot="start"></ion-icon>General
+    </ion-item>
+    <ion-item (click)="openNotifications()">
+        <ion-icon name="cube" slot="start"></ion-icon>Notifications
+    </ion-item>
+    <ion-item (click)="openUser()">
+        <ion-icon name="contacts" slot="start"></ion-icon>User
+    </ion-item>
+    <ion-item (click)="openAbout()">
+        <ion-icon name="code" slot="start"></ion-icon>About
+    </ion-item>
+  </ion-list>
+</ion-content>
